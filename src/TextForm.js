@@ -16,6 +16,20 @@ export default function Textform(props) {
         // setText("You have clicked on handelOnChange")
     }
 
+    const handleClearClick = ()=>{ 
+        let newText = '';
+        setText(newText);
+    }
+
+    const handleCopy = () => {
+        navigator.clipboard.writeText(text); 
+    }
+
+    const handleExtraSpaces = () => {
+        let newText = text.split(/[ ]+/);
+        setText(newText.join(" "));
+    }
+
     const handleOnChange = (event)=> {
         // console.log("On change")
         setText(event.target.value)
@@ -32,8 +46,12 @@ export default function Textform(props) {
             <div className="mb-3">
                 <textarea className="form-control" value={text} onChange={handleOnChange} id="myBox" rows="9"></textarea>
             </div>
-            <button className="btn btn-primary" onClick={handleUpClick}>Convert to uppercase</button>
+            <button className="btn btn-primary mx-2" onClick={handleUpClick}>Convert to uppercase</button>
             <button className="btn btn-primary mx-2" onClick={handleLoClick}>Convert to lowercase</button>
+            <button className="btn btn-primary mx-2" onClick={handleClearClick}>Clear text</button>
+            <button className="btn btn-primary mx-2" onClick={handleCopy}>Copy to clipboard</button>
+            <button className="btn btn-primary mx-2" onClick={handleExtraSpaces}>Remove extra spaces</button>
+
         </div>
         <div className='container'>
             <h2>Your text summary</h2>

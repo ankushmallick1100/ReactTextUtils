@@ -1,7 +1,7 @@
-import About from "./About";
+//import About from "./About";
 import "./App.css";
 import Navbar from "./Navbar";
-//import TextForm from "./TextForm";
+import TextForm from "./TextForm";
 
 function App() {
   return (
@@ -10,8 +10,8 @@ function App() {
       {/* <Navbar title="TextUtils" aboutText="About TextUtils"/> */}
       <Navbar title="TextUtils" />
       <div className="container my-4">
-        {/* <TextForm heading="Enter the text to analyze below"/> */}
-        <About/>
+        <TextForm heading="Enter the text to analyze below"/>
+        {/* <About/> */}
       </div>
     </>
   );
