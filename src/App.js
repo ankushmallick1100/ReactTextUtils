@@ -1,9 +1,9 @@
-import About from "./About";
+import About from "./component/About";
 import React, { useState } from "react";
-import Alert from "./Alert";
+import Alert from "./component/Alert";
 import "./App.css";
-import Navbar from "./Navbar";
-import TextForm from "./TextForm";
+import Navbar from "./component/Navbar";
+import TextForm from "./component/TextForm";
 import {
   BrowserRouter,
   Routes,
